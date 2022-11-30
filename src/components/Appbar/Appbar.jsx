@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom';
+import * as SC from './Appbar.styled.js';
 
 export const Appbar = () => {
   return (
-    <>
-      <Link to="/">Home</Link>
-      <Link to="/movies">Movies</Link>
-    </>
+    <SC.Header>
+      <SC.NavItem to="/">
+        <span>Home</span>
+      </SC.NavItem>
+      <SC.NavItem to="/movies">
+        <span>Movies</span>
+      </SC.NavItem>
+    </SC.Header>
   );
 };

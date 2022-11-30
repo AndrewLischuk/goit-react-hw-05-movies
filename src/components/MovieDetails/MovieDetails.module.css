@@ -1,0 +1,48 @@
+.movieItem {
+  display: flex;
+  flex-direction: column;
+  background-image: url();
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.overview {
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 5;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.poster {
+  z-index: 5;
+}
+
+.descr {
+  padding-left: 20px;
+  line-height: 1.5;
+}
+.descr h2 {
+  font-size: 40px;
+}
+.descr p {
+  font-size: 24px;
+}
+
+.descr span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff6b0a;
+}
