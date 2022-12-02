@@ -51,6 +51,9 @@ export const Movies = () => {
               </NavLink>
             )
           )}
+        {query && searchMovies.length === 0 && (
+          <div>{`No movies on "${query}" request`}</div>
+        )}
       </div>
       <Outlet />
     </div>
