@@ -11,3 +11,9 @@
   width: 200px;
   padding: 10px;
 }
+
+.movieItem img {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+}

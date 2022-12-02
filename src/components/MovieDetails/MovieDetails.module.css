@@ -11,9 +11,14 @@
 .overview {
   padding: 20px 20px 0 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   z-index: 5;
+}
+
+.overviewBox {
+  display: flex;
+  flex-direction: row;
 }
 
 .backdrop {

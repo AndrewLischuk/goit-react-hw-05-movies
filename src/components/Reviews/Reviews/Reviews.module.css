@@ -1,0 +1,30 @@
+.revBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.revBlock p {
+  font-size: 20px;
+  padding-left: 30px;
+  margin: 5px 0;
+}
+
+.revItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.revItem span {
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff6b0a;
+  hyphens: auto;
+}
+
+.revItem p {
+  font-size: 18px;
+  padding-left: 30px;
+  margin: 5px 0;
+}

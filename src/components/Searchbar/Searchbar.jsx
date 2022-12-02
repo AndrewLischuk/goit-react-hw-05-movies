@@ -1,41 +1,38 @@
 // import PropTypes from 'prop-types';
+
 import { useState } from 'react';
 import styles from './Searchbar.module.css';
 
-const Searchbar = ({ handlerSearchRequest }) => {
-  const [query, setQuery] = useState('');
+const Searchbar = ({ handleQuery, value = '' }) => {
+  //   const [query, setQuery] = useState('');
 
-  const handlerInputChange = e => {
-    const { value } = e.currentTarget;
-    setQuery(value);
+  //   const handleInputChange = e => {
+  //     const { value } = e.currentTarget;
+  //     console.log(value);
+  //     setQuery(value);
+  //   };
+
+  const handlerFormSubmit = e => {
+    e.preventDefault();
+    // handleQuery(query);
   };
-
-  // const handlerFormSubmit = e => {
-  //   e.preventDefault();
-  //   handlerSearchRequest(searchRequest, page);
-  //   setPage(1);
-  //   setSearchRequest('');
-  // };
-
   return (
     <div className={styles.searchbar}>
-      <form
-        className={styles.searchForm}
-        //  onSubmit={handlerFormSubmit}
-      >
-        <button type="submit" className={styles.searchFormButton}>
-          <span className={styles.searchFormButtonLabel}></span>
-        </button>
-
+      <form className={styles.searchForm} onSubmit={handlerFormSubmit}>
         <input
           className={styles.searchFormInput}
           type="text"
           autoComplete="off"
-          value={query}
+          value={value}
           autoFocus
           placeholder="Search images and photos"
-          onChange={handlerInputChange}
+          // onChange={e => handleQuery(e.currentTarget.value)}
+          // onChange={handleInputChange}
+          onChange={e => handleQuery(e.target.value)}
         />
+        <button type="submit" className={styles.searchFormButton}>
+          <span className={styles.searchFormButtonLabel}></span>
+        </button>
       </form>
     </div>
   );

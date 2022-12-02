@@ -1,0 +1,30 @@
+.castBlock {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+}
+
+.castItem {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  padding: 15px;
+}
+
+.castImg {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.castItem span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff6b0a;
+  padding: 10px 0;
+  hyphens: auto;
+}
+.castItem p {
+  font-size: 20px;
+  hyphens: auto;
+}
