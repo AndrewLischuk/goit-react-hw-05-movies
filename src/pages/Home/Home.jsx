@@ -11,7 +11,6 @@ export const Home = () => {
 
   useEffect(() => {
     movieAPI.fetchMovies().then(data => {
-      // console.log(data);
       setTrending(data.results);
     });
   }, []);

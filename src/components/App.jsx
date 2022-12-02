@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Credits } from './Credits/Credits';
 import { Layout } from './Layout/Layout';
 import { MovieDetails } from './MovieDetails/MovieDetails.jsx';
-import { Reviews } from './Reviews/Reviews/Reviews';
+import { Reviews } from './Reviews/Reviews';
 
 export const App = () => {
   return (

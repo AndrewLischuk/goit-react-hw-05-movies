@@ -1,6 +1,5 @@
 import Searchbar from 'components/Searchbar/Searchbar';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   NavLink,
   Outlet,
@@ -28,12 +27,11 @@ export const Movies = () => {
 
   const handleQuery = value => {
     setSearchParams(value !== '' ? { query: value } : {});
-    // console.log(value);
   };
 
   return (
     <div>
-      {!movieId && <Searchbar handleQuery={handleQuery} value={query} />}
+      {!movieId && <Searchbar handleQuery={handleQuery} queryValue={query} />}
       <div className={styles.movieList}>
         {!movieId &&
           searchMovies.length !== 0 &&

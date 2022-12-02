@@ -1,20 +1,23 @@
 // import PropTypes from 'prop-types';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Searchbar.module.css';
 
-const Searchbar = ({ handleQuery, value = '' }) => {
-  //   const [query, setQuery] = useState('');
+const Searchbar = ({ handleQuery, queryValue = '' }) => {
+  const [query, setQuery] = useState('');
 
-  //   const handleInputChange = e => {
-  //     const { value } = e.currentTarget;
-  //     console.log(value);
-  //     setQuery(value);
-  //   };
+  useEffect(() => {
+    setQuery(queryValue);
+  }, [queryValue]);
+
+  const handleInputChange = e => {
+    const { value } = e.currentTarget;
+    setQuery(value);
+  };
 
   const handlerFormSubmit = e => {
     e.preventDefault();
-    // handleQuery(query);
+    handleQuery(query);
   };
   return (
     <div className={styles.searchbar}>
@@ -23,12 +26,10 @@ const Searchbar = ({ handleQuery, value = '' }) => {
           className={styles.searchFormInput}
           type="text"
           autoComplete="off"
-          value={value}
+          value={query}
           autoFocus
           placeholder="Search images and photos"
-          // onChange={e => handleQuery(e.currentTarget.value)}
-          // onChange={handleInputChange}
-          onChange={e => handleQuery(e.target.value)}
+          onChange={handleInputChange}
         />
         <button type="submit" className={styles.searchFormButton}>
           <span className={styles.searchFormButtonLabel}></span>
