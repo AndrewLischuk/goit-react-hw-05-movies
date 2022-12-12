@@ -62,10 +62,10 @@ export const MovieDetails = () => {
         </div>
       </div>
       <SC.Nav>
-        <SC.NavItem to="credits" state={{ from: location.state.from }}>
+        <SC.NavItem to="credits" state={{ from: location.state?.from }}>
           Cast
         </SC.NavItem>
-        <SC.NavItem to="reviews" state={{ from: location.state.from }}>
+        <SC.NavItem to="reviews" state={{ from: location.state?.from }}>
           Reviews
         </SC.NavItem>
       </SC.Nav>
